@@ -1,0 +1,6 @@
+
+> nextjs_tailwind_shadcn_ts@0.1.0 dev
+> nodemon --exec "npx tsx server.ts" --watch server.ts --watch src --ext ts,tsx,js,jsx 2>&1 | tee dev.log --port 3001 --host 0.0.0.0
+
+tee: unrecognized option '--port'
+Try 'tee --help' for more information.

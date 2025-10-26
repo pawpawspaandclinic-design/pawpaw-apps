@@ -1,0 +1,21 @@
+<svg width="192" height="192" viewBox="0 0 192 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9333ea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="192" height="192" rx="48" fill="url(#gradient)"/>
+  
+  <!-- Heart Icon -->
+  <path d="M96 144C96 144 48 108 48 72C48 48 64 32 84 32C92 32 100 36 96 40C92 36 100 32 108 32C128 32 144 48 144 72C144 108 96 144 96 144Z" fill="white"/>
+  
+  <!-- Paw Print Details -->
+  <circle cx="72" cy="56" r="8" fill="white" opacity="0.8"/>
+  <circle cx="120" cy="56" r="8" fill="white" opacity="0.8"/>
+  <circle cx="60" cy="80" r="6" fill="white" opacity="0.8"/>
+  <circle cx="132" cy="80" r="6" fill="white" opacity="0.8"/>
+  <circle cx="96" cy="72" r="10" fill="white" opacity="0.6"/>
+</svg>

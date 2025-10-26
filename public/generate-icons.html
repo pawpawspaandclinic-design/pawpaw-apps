@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Icons</title>
+</head>
+<body>
+    <canvas id="canvas" width="192" height="192"></canvas>
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Create gradient background
+        const gradient = ctx.createLinearGradient(0, 0, 192, 192);
+        gradient.addColorStop(0, '#9333ea');
+        gradient.addColorStop(1, '#ec4899');
+        
+        // Draw rounded rectangle background
+        ctx.fillStyle = gradient;
+        ctx.beginPath();
+        ctx.roundRect(0, 0, 192, 192, 48);
+        ctx.fill();
+        
+        // Draw heart shape
+        ctx.fillStyle = 'white';
+        ctx.beginPath();
+        ctx.moveTo(96, 120);
+        ctx.bezierCurveTo(96, 120, 48, 84, 48, 48);
+        ctx.bezierCurveTo(48, 24, 64, 8, 84, 8);
+        ctx.bezierCurveTo(92, 8, 100, 12, 96, 16);
+        ctx.bezierCurveTo(92, 12, 100, 8, 108, 8);
+        ctx.bezierCurveTo(128, 8, 144, 24, 144, 48);
+        ctx.bezierCurveTo(144, 84, 96, 120, 96, 120);
+        ctx.fill();
+        
+        // Draw paw print details
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+        ctx.beginPath();
+        ctx.arc(72, 32, 8, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        ctx.beginPath();
+        ctx.arc(120, 32, 8, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        ctx.beginPath();
+        ctx.arc(60, 56, 6, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        ctx.beginPath();
+        ctx.arc(132, 56, 6, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.6)';
+        ctx.beginPath();
+        ctx.arc(96, 48, 10, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        // Convert to data URL
+        const dataURL = canvas.toDataURL('image/png');
+        console.log('Generated icon data URL:', dataURL);
+        
+        // Create download link
+        const link = document.createElement('a');
+        link.download = 'icon-192x192.png';
+        link.href = dataURL;
+        link.click();
+    </script>
+</body>
+</html>
